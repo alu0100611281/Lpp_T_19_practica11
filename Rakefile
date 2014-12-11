@@ -9,10 +9,10 @@ task :spec do
 end
 
 task :install do
-    sh "gem install  quizkarenjose-0.0.1.gem" 
+    sh "gem install quizkarenjose" 
 end
 
 task :build do
-   sh "gem build  quizkarenjose-0.0.1.gem"
+   sh "gem install quizkarenjose"
 end
 
