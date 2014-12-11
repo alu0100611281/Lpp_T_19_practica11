@@ -46,9 +46,6 @@ module Quiz
 	}
   end#end del before
 
-	}
-  end#end del before
-
   context "Pruebas para la clase Questionario_Quiz" do
       it "El atributo es de la clase" do
 	expect(@quiz.class).to eq(Quest_Quiz )
