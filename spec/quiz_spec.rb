@@ -50,7 +50,9 @@ module Quiz
       it "El atributo es de la clase" do
 	expect(@quiz.class).to eq(Quest_Quiz )
       end
-
+       it "Tiene un metodo to_s" do
+	expect(@quiz.class).to respond_to :to_s
+      end
   end#end context
 end#end describe quiz
 

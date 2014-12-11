@@ -11,12 +11,12 @@ class Question
     
     def to_s
         imprimir = ""
-        imprimir << @pregunta << "\n"
+        imprimir << @pregunta << "\n\n\n"
         n = 1
-        imprimir << "#{n}.- #{opciones_respuestas[:right]}\n"
+        imprimir << "\t #{n}.-- #{opciones_respuestas[:right]}\n"
         n+=1
         opciones_respuestas[:wrong].each do |op|
-           imprimir << " #{n}.- #{op}\n"
+           imprimir << "\t #{n}.-- #{op}\n"
             n+=1
         end
        imprimir
@@ -43,11 +43,12 @@ class Quest_Quiz
   end
   
   def to_s
-    imprimir = @titulo
+    imprimir = "\n\n\n"
+    imprimir << @titulo
     imprimir << "\n\n\n"
     cont = 1
     questions.each do |question|
-     imprimir << " #{cont}.) #{question}\n"
+     imprimir << " #{cont} => ) #{question}\n"
      cont += 1
     end
    imprimir
@@ -59,7 +60,8 @@ class Quest_Quiz
   end
   
   def wrong (option)
-    @questions[-1].opciones_respuestas[:wrong] << option #no machar, se introduce las respuestas correctas dentro de las preguntas,
+    @questions[-1].opciones_respuestas[:wrong] << option #no machacar
+   # @questions.opciones_respuestas[:wrong].push (option)
     #el ultimo objeto del array
   end
   
