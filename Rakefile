@@ -13,6 +13,6 @@ task :install do
 end
 
 task :build do
-   sh "gem install quizkarenjose"
+   sh "gem build quizkarenjose"
 end
 
